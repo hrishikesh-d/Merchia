@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Product Detail</title>
+
+        <!-- CSS FILES -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap-icons.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/slick.css"/>
+
+        <link href="css/tooplate-little-fashion.css" rel="stylesheet">
+
+
+
+        <style>
+            .slider-container {
+                position: relative;
+                width: 100%;
+                max-width: 100%;
+                overflow: hidden;
+            }
+            .slider {
+                display: flex;
+                overflow: hidden;
+            }
+            .slider img {
+                width: 100%;
+                height: auto;
+                object-fit: cover; /* Ensures the image covers the entire slider area */
+                display: none;
+            }
+            .slider img.active {
+                display: block;
+            }
+            .prev-btn, .next-btn {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: rgba(0, 0, 0, 0.5);
+                color: #fff;
+                border: none;
+                padding: 10px;
+                cursor: pointer;
+                z-index: 1;
+            }
+            .prev-btn {
+                left: 10px;
+            }
+            .next-btn {
+                right: 10px;
+            }
+        </style>
+        
+    </head>
+    
+    <body>
+
+        <section class="preloader">
+            <div class="spinner">
+                <span class="sk-inner-circle"></span>
+            </div>
+        </section>
+    
+        <main>
+            <!-- NAVBAR -->
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <a class="navbar-brand" href="index.html">
+                        <strong><span>Merchia</span> Global </strong>
+                    </a>
+
+                    <div class="d-lg-none">
+                        <a href="sign-in.html" class="bi-person custom-icon me-3"></a>
+
+                        <a href="product-detail.html" class="bi-bag custom-icon"></a>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="index.html">Home</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">About</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="products.html">Products</a>
+                            </li>
+
+                            <!-- <li class="nav-item">
+                                <a class="nav-link" href="faq.html">FAQs</a>
+                            </li> -->
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact</a>
+                            </li>
+                        </ul>
+
+                        <div class="d-none d-lg-block">
+                            <!-- <a href="sign-in.html" class="bi-person custom-icon me-3"></a>  -->
+
+                            <a href="product-detail.html" class="bi-bag custom-icon"></a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- PRODUCT INTRODUCTION -->
+            <header class="site-header section-padding d-flex justify-content-center align-items-center">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-10 col-12">
+                            <h1>
+                                <span class="d-block text-primary">Introduction</span>
+                                <!-- <span class="d-block text-dark">Quality Goods</span> -->
+                            </h1>
+                        </div>
+                        <div>
+                            <p class="mb-5">
+                                Red chilli powder, a vibrant and essential spice in Indian cuisine, is derived from dried red chillies. This fiery powder not only adds heat to dishes but also enhances their color and flavor. India, one of the largest producers and exporters of red chilli powder, exports approximately 400,000 to 500,000 metric tons annually. The majority of red chillies in India are grown in the states of Andhra Pradesh, Telangana, Karnataka, and Maharashtra, where the climate and soil conditions are ideal for cultivating high-quality chillies.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+
+
+
+            <!-- IMAGE SLIDER -->
+
+            <section class="product-detail section-padding">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-12">
+                            <div class="slider-container">
+                                <div class="slider">
+                                    <img src="MerchiaImages/redChllies.webp" class="active" alt="Image 1" >
+                                    <img src="MerchiaImages/cashewBowl.jpg" alt="Image 2">
+                                    <img src="MerchiaImages/WholeWhiteCashew.jpg" alt="Image 3">
+                                </div>
+                                <button class="prev-btn" onclick="changeSlide(-1)">&#10094;</button>
+                                <button class="next-btn" onclick="changeSlide(1)">&#10095;</button>
+                            </div>
+                        </div>
+
+                        <!-- Description Box -->
+                        <div class="col-lg-6 col-12">      
+                                <div class="container" >
+                                        
+                                            <div class="product-info d-flex">
+                                                <div>
+                                                    <h2 class="product-title mb-0">Red Chillies</h2>
+                
+                                                    <p class="product-p">Original package design from house</p>                                                <strong class="d-block mt-4 mb-2">Description</strong>
+                
+                                                <p>
+                                                    Red Chillies from India are celebrated for their vibrant color, 
+                                                    intense heat, and rich flavor. Cultivated in the fertile soils of India, 
+                                                    these chillies are a staple in Indian cuisine and are widely used to add 
+                                                    spice and depth to a variety of dishes. Available in different varieties 
+                                                    ranging from mildly hot to extremely fiery, Indian red chillies are known 
+                                                    for their consistent quality and potency. They are a key export product, 
+                                                    meeting the global demand for authentic, high-quality spices that bring 
+                                                    a fiery kick to any culinary creation.
+                                                </p>
+                                                </div>
+                                            </div>
+                
+                
+                                            <div class="product-cart-thumb row">
+                                                <div class="col-lg-6 col-12">
+                                                    <input  
+                                                        type="number" class=" cart-form-select" id="inputGroupSelect01"
+                                                        min="0"  placeholder="0"
+                                                        style="text-align: center;" 
+                                                    >
+                                                        
+                                                    </input>
+                                                </div>
+                                                <div class="col-lg-6 col-12 mt-4 mt-lg-0">
+                                                        <a href="quote.html">
+                                                            <button 
+                                                                type="button" 
+                                                                class="btn custom-btn cart-btn add-to-quote"  
+                                                                data-product="Red Chllies" 
+                                                                data-price="25" 
+                                                                data-image="MerchiaImages/redChllies.webp"
+                                                            >   
+                                                                Add to Quote
+                                                            </button>
+                                                        </a>
+                                                </div>
+                                            </div>               
+                                </div>   
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- JAVASCRIPT FILES -->
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    let slideIndex = 0;
+                    const slides = document.querySelectorAll('.slider img');
+
+                    function showSlide(index) {
+                        slides.forEach((slide, i) => {
+                            slide.style.display = i === index ? 'block' : 'none';
+                        });
+                    }
+
+                    function changeSlide(n) {
+                        slideIndex = (slideIndex + n + slides.length) % slides.length;
+                        showSlide(slideIndex);
+                    }
+
+                    showSlide(slideIndex);
+
+                    // ADD PRODUCT TO QUOTE FUNCTIONALITY
+                    document.querySelectorAll('.add-to-quote').forEach(button => {
+                        button.addEventListener('click', function() {
+                            const product = this.dataset.product;
+                            const price = this.dataset.price;
+                            const image = this.dataset.image;
+                            const quantity = document.querySelector('.cart-form-select').value;
+
+                            // Retrieve the current quote items from localStorage or initialize an empty array
+                            const quoteItems = JSON.parse(localStorage.getItem('quoteItems')) || [];
+
+                            // Add the new item to the quote items
+                            quoteItems.push({ product, price, image, quantity });
+
+                            // Save the updated quote items back to localStorage
+                            localStorage.setItem('quoteItems', JSON.stringify(quoteItems));
+                        });
+                    });
+                });
+            </script>
+
+            <!-- JAVASCRIPT FILES -->
+            <script>
+                let slideIndex = 0;
+                const slides = document.querySelectorAll('.slider img');
+
+                function showSlide(index) {
+                    slides.forEach((slide, i) => {
+                        slide.style.display = i === index ? 'block' : 'none';
+                    });
+                }
+
+                function changeSlide(n) {
+                    slideIndex = (slideIndex + n + slides.length) % slides.length;
+                    showSlide(slideIndex);
+                }
+
+                document.addEventListener('DOMContentLoaded', () => {
+                    showSlide(slideIndex);
+                });
+            </script>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-10 me-auto mb-4">
+                        <h4 class="text-white mb-3"><a href="index.html">Merchia</a> Global</h4>
+                        <br>
+                    </div>
+
+                    <div class="col-lg-5 col-8">
+                        <h5 class="text-white mb-3">Services</h5>
+
+                        <ul class="footer-menu d-flex flex-column">
+                            <li class="footer-menu-item"><a href="about.html" class="footer-menu-link">About</a></li>
+
+                            <li class="footer-menu-item"><a href="products.html" class="footer-menu-link">Products</a></li>
+
+                            <li class="footer-menu-item"><a href="contact.html" class="footer-menu-link">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-4">
+                        <h5 class="text-white mb-3">Social</h5>
+
+                        <ul class="social-icon">
+
+                            <li><a href="#" class="social-icon-link bi-youtube"></a></li>
+
+                            <li><a href="#" class="social-icon-link bi-whatsapp"></a></li>
+
+                            <li><a href="#" class="social-icon-link bi-instagram"></a></li>
+
+                            <li><a href="#" class="social-icon-link bi-skype"></a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+
+        <!-- JAVASCRIPT FILES -->
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/Headroom.js"></script>
+        <script src="js/jQuery.headroom.js"></script>
+        <script src="js/slick.min.js"></script>
+        <script src="js/custom.js"></script>
+
+        
+
+    </body>
+</html>
