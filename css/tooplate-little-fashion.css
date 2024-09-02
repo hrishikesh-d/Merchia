@@ -581,6 +581,9 @@ strong {
   .slick-slideshow .slick-dots {
     max-width: 960px;
   }
+  .slick-title{
+    font-size: 40px;
+  }
 }
 
 @media (min-width: 1200px) {
